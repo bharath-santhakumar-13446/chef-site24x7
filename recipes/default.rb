@@ -30,5 +30,6 @@ end
 
 service "site24x7monagent" do
   supports :status => true, :restart => true, :reload => true
+  provider Chef::Provider::Service::Systemd
   action [ :enable, :start ]
 end
